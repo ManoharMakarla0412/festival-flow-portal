@@ -39,6 +39,9 @@ export function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Initialize the navbar with a background on mount to ensure visibility
+    setIsScrolled(true);
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -46,7 +49,8 @@ export function Navbar() {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all-medium py-4 px-6 md:px-10",
-        isScrolled ? "glass-effect" : "bg-transparent"
+        // Always have at least a minimal background to ensure content is visible
+        isScrolled ? "glass-effect" : "bg-background/90 backdrop-blur-sm"
       )}
     >
       <nav className="container mx-auto flex items-center justify-between">
