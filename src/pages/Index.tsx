@@ -204,7 +204,10 @@ const Index = () => {
     <>
       <Helmet>
         <title>Event Management - Home</title>
-        <meta name="description" content="Join us for an extraordinary event experience that brings together innovation, networking, and knowledge-sharing." />
+        <meta 
+          name="description" 
+          content="Join us for an extraordinary event experience that brings together innovation, networking, and knowledge-sharing." 
+        />
       </Helmet>
       
       <Navbar />

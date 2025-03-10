@@ -2,10 +2,10 @@
 import { Helmet } from 'react-helmet';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { CommitteeGrid, CommitteeMember } from '@/components/CommitteeGrid';
+import { CommitteeGrid } from '@/components/CommitteeGrid';
 
-// Sample committee members data (expanded list)
-const committeeMembers: CommitteeMember[] = [
+// Sample committee members data 
+const committeeMembers = [
   {
     id: 1,
     name: 'Sarah Johnson',
@@ -89,8 +89,6 @@ const committeeMembers: CommitteeMember[] = [
 
 // Executive committee
 const executiveCommittee = committeeMembers.slice(0, 3);
-
-// Organizing committee
 const organizingCommittee = committeeMembers.slice(3, 9);
 
 const Committee = () => {
@@ -98,17 +96,23 @@ const Committee = () => {
     <>
       <Helmet>
         <title>Event Management - Organization Committee</title>
-        <meta name="description" content="Meet the dedicated team behind this event, working tirelessly to create an exceptional experience for all attendees." />
+        <meta 
+          name="description" 
+          content="Meet the dedicated team behind this event, working tirelessly to create an exceptional experience for all attendees." 
+        />
       </Helmet>
       
       <Navbar />
       
       <main className="pt-20">
-        {/* Hero Section */}
         <section className="bg-primary/5 py-20 px-6 md:px-10">
           <div className="container mx-auto text-center">
-            <span className="inline-block text-sm font-medium text-primary mb-3 animate-fade-in">Meet Our Team</span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">Organization Committee</h1>
+            <span className="inline-block text-sm font-medium text-primary mb-3 animate-fade-in">
+              Meet Our Team
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-slide-up">
+              Organization Committee
+            </h1>
             <p className="text-muted-foreground max-w-3xl mx-auto animate-slide-up">
               Our event is organized by a dedicated team of professionals with extensive experience in event management, 
               technology, marketing, and more. Together, they work to create an unforgettable conference experience.
@@ -116,7 +120,6 @@ const Committee = () => {
           </div>
         </section>
         
-        {/* Executive Committee */}
         <CommitteeGrid 
           title="Executive Committee"
           description="Meet our leadership team responsible for the overall vision and direction of the event."
@@ -124,7 +127,6 @@ const Committee = () => {
           className="py-20"
         />
         
-        {/* Organizing Committee */}
         <CommitteeGrid 
           title="Organizing Committee"
           description="These dedicated professionals handle all aspects of planning and executing the event."
@@ -132,7 +134,6 @@ const Committee = () => {
           className="bg-primary/5"
         />
         
-        {/* Committee Mission */}
         <section className="py-20 px-6 md:px-10">
           <div className="container mx-auto max-w-4xl">
             <div className="glass-card p-8 md:p-12">
