@@ -29,7 +29,7 @@ const committeeMembers = [
     name: 'Jessica Chen',
     role: 'Marketing Coordinator',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    bio: 'Jessica's creative approach to marketing has been instrumental in building excitement for this event.',
+    bio: "Jessica's creative approach to marketing has been instrumental in building excitement for this event.",
     email: 'jessica@example.com',
     twitter: 'https://twitter.com',
   },
