@@ -1,5 +1,5 @@
 
-import { Helmet } from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { CommitteeGrid } from '@/components/CommitteeGrid';
@@ -93,7 +93,7 @@ const organizingCommittee = committeeMembers.slice(3, 9);
 
 const Committee = () => {
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Event Management - Organization Committee</title>
         <meta 
@@ -155,7 +155,7 @@ const Committee = () => {
       </main>
       
       <Footer />
-    </>
+    </HelmetProvider>
   );
 };
 

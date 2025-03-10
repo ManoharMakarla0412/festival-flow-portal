@@ -1,5 +1,5 @@
 
-import { Helmet } from 'react-helmet';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import EventDetails from '@/components/EventDetails';
@@ -120,7 +120,7 @@ const speakers = [
   },
 ];
 
-// Sample schedule data
+// Sample schedule data - fixed type issues by explicitly setting the type property to match the enum
 const schedule = [
   {
     date: 'Day 1 - October 15, 2023',
@@ -132,7 +132,7 @@ const schedule = [
         date: 'October 15, 2023',
         location: 'Main Lobby',
         description: 'Check in and collect your event materials. Coffee and light refreshments will be provided.',
-        type: 'registration',
+        type: 'registration' as const,
       },
       {
         id: 2,
@@ -142,7 +142,7 @@ const schedule = [
         location: 'Grand Ballroom',
         speaker: 'Dr. Alex Rivera',
         description: 'The Future of Machine Learning: Beyond Neural Networks - An exploration of the next generation of AI technology.',
-        type: 'talk',
+        type: 'talk' as const,
       },
       {
         id: 3,
@@ -151,7 +151,7 @@ const schedule = [
         date: 'October 15, 2023',
         location: 'Exhibition Hall',
         description: 'Refresh with coffee and snacks while networking with other attendees.',
-        type: 'break',
+        type: 'break' as const,
       },
       {
         id: 4,
@@ -161,7 +161,7 @@ const schedule = [
         location: 'Panel Room A',
         speaker: 'Multiple Speakers',
         description: 'Industry leaders discuss the most important trends in technology and innovation for the coming year.',
-        type: 'talk',
+        type: 'talk' as const,
       },
     ],
   },
@@ -175,7 +175,7 @@ const schedule = [
         date: 'October 16, 2023',
         location: 'Workshop Rooms',
         description: 'Choose from three concurrent workshops on AI, Sustainability, or UX Design.',
-        type: 'workshop',
+        type: 'workshop' as const,
       },
       {
         id: 6,
@@ -184,7 +184,7 @@ const schedule = [
         date: 'October 16, 2023',
         location: 'Garden Terrace',
         description: 'Enjoy a catered lunch while making valuable connections with fellow attendees.',
-        type: 'break',
+        type: 'break' as const,
       },
       {
         id: 7,
@@ -193,7 +193,7 @@ const schedule = [
         date: 'October 16, 2023',
         location: 'Exhibition Hall',
         description: 'See demonstrations from cutting-edge startups and established companies showcasing their latest innovations.',
-        type: 'networking',
+        type: 'networking' as const,
       },
     ],
   },
@@ -201,7 +201,7 @@ const schedule = [
 
 const Index = () => {
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>Event Management - Home</title>
         <meta 
@@ -265,7 +265,7 @@ const Index = () => {
       </main>
       
       <Footer />
-    </>
+    </HelmetProvider>
   );
 };
 
