@@ -32,7 +32,7 @@ export function Hero({
   return (
     <section 
       className={cn(
-        "relative min-h-screen flex items-center justify-center overflow-hidden",
+        "relative min-h-screen flex items-center justify-center overflow-hidden pt-16", // Added pt-16 to create space for navbar
         className
       )}
     >
@@ -68,7 +68,7 @@ export function Hero({
             </span>
             
             <Button asChild size="lg" className="button-hover animate-scale-in">
-              <Link to="/register">Register Now</Link>
+              <Link to="https://event-management-seven-delta.vercel.app/registration">Register Now</Link>
             </Button>
           </div>
         </div>

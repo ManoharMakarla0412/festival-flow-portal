@@ -39,7 +39,7 @@ export function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    // Initialize the navbar with a background on mount to ensure visibility
+    // Initialize the navbar with a solid background to ensure visibility
     setIsScrolled(true);
     
     return () => window.removeEventListener('scroll', handleScroll);
@@ -48,9 +48,9 @@ export function Navbar() {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all-medium py-4 px-6 md:px-10",
-        // Always have at least a minimal background to ensure content is visible
-        isScrolled ? "glass-effect" : "bg-background/90 backdrop-blur-sm"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-10",
+        // Always have a solid background to ensure content is visible
+        "bg-background shadow-md"
       )}
     >
       <nav className="container mx-auto flex items-center justify-between">
@@ -59,12 +59,7 @@ export function Navbar() {
           to="/" 
           className="text-2xl font-bold tracking-tight animate-fade-in"
         >
-          <span className={cn(
-            "transition-colors duration-500",
-            isScrolled ? "text-foreground" : "text-primary"
-          )}>
-            EVENT
-          </span>
+          <span className="text-primary">EVENT</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -74,15 +69,15 @@ export function Navbar() {
               key={link.path}
               to={link.path}
               className={cn(
-                "nav-link text-sm font-medium",
-                isActive(link.path) && "nav-link-active"
+                "nav-link text-sm font-medium transition-colors hover:text-primary",
+                isActive(link.path) ? "text-primary font-semibold" : "text-foreground"
               )}
             >
               {link.title}
             </Link>
           ))}
           <Button asChild size="sm" className="button-hover animate-scale-in">
-            <Link to="/register">Register</Link>
+            <Link to="https://event-management-seven-delta.vercel.app/registration">Register</Link>
           </Button>
         </div>
 
@@ -97,7 +92,7 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-[72px] z-50 glass-effect animate-fade-in">
+          <div className="md:hidden fixed inset-0 top-[72px] z-50 bg-background animate-fade-in">
             <div className="flex flex-col items-center justify-center space-y-6 h-full">
               {navLinks.map((link) => (
                 <Link
@@ -112,7 +107,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild size="lg" className="mt-4 button-hover animate-scale-in">
-                <Link to="/register">Register</Link>
+                <Link to="https://event-management-seven-delta.vercel.app/registration">Register</Link>
               </Button>
             </div>
           </div>
