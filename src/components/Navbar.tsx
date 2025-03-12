@@ -77,7 +77,7 @@ export function Navbar() {
             </Link>
           ))}
           <Button asChild size="sm" className="button-hover animate-scale-in">
-            <Link to="https://event-management-seven-delta.vercel.app/registration">Register</Link>
+            <Link to="/registration">Register</Link>
           </Button>
         </div>
 
@@ -107,7 +107,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild size="lg" className="mt-4 button-hover animate-scale-in">
-                <Link to="https://event-management-seven-delta.vercel.app/registration">Register</Link>
+                <Link to="/registration">Register</Link>
               </Button>
             </div>
           </div>

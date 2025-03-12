@@ -68,7 +68,7 @@ export function Hero({
             </span>
             
             <Button asChild size="lg" className="button-hover animate-scale-in">
-              <Link to="https://event-management-seven-delta.vercel.app/registration">Register Now</Link>
+              <Link to="/registration">Register Now</Link>
             </Button>
           </div>
         </div>
