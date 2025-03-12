@@ -100,15 +100,15 @@
 
   /* Custom classes */
   .glass-effect {
-    @apply bg-white/60 backdrop-blur-md border border-white/30 shadow-sm;
+    @apply backdrop-blur-md border border-white/30 shadow-sm;
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/30 shadow-sm rounded-2xl;
+    @apply backdrop-blur-md border border-white/30 shadow-sm rounded-2xl;
   }
 
   .glass-card-dark {
-    @apply bg-black/40 backdrop-blur-md border border-white/10 shadow-md rounded-2xl;
+    @apply backdrop-blur-md border border-white/10 shadow-md rounded-2xl;
   }
 
   .transition-all-fast {

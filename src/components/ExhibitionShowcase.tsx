@@ -40,8 +40,8 @@ export function ExhibitionShowcase({
     : exhibitions.filter(ex => ex.category === activeCategory);
   
   return (
-    <section className={cn("py-20 px-6 md:px-10", className)}>
-      <div className="container mx-auto">
+    <section className={cn("py-20 px-4", className)}>
+      <div className="w-full mx-0">
         {/* Section Title */}
         <div className="text-center mb-16 animate-fade-in">
           <span className="inline-block text-sm font-medium text-primary mb-3">Discover Innovation</span>
@@ -73,7 +73,7 @@ export function ExhibitionShowcase({
           {filteredExhibitions.map((exhibition, index) => (
             <div 
               key={exhibition.id} 
-              className="group glass-card overflow-hidden transition-all hover:shadow-lg animate-slide-up"
+              className="group overflow-hidden transition-all hover:shadow-lg animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="h-64 overflow-hidden">

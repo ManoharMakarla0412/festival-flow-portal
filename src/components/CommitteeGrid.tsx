@@ -28,7 +28,7 @@ export function CommitteeGrid({
 }: CommitteeGridProps) {
   return (
     <section className={cn("w-full py-16 md:py-20", className)}>
-      <div className="max-w-7xl mx-auto px-6 md:px-10">
+      <div className="w-full mx-0 px-4 md:px-6">
         {/* Section Title */}
         <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <span className="inline-block text-sm font-medium text-primary mb-3">Meet Our Team</span>
@@ -42,7 +42,7 @@ export function CommitteeGrid({
           {members.map((member, index) => (
             <div 
               key={member.id} 
-              className="group glass-card p-5 md:p-6 transition-all hover:shadow-lg animate-slide-up"
+              className="group p-5 md:p-6 transition-all hover:shadow-lg animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="mb-6 overflow-hidden rounded-xl">
