@@ -76,13 +76,13 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-primary mt-1 flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  123 Conference Center, Innovation Street, San Francisco, CA 94103
+                 701, Quanint Techsoft Private Limited, Asian Sun City, Gachibowli, Hyderabad, India. 
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-primary flex-shrink-0" />
-                <a href="tel:+11234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                  +1 (123) 456-7890
+                <a href="tel:+919390165833" className="text-muted-foreground hover:text-primary transition-colors">
+                  +91 93901 65833
                 </a>
               </li>
               <li className="flex items-center gap-3">
