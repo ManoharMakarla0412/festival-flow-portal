@@ -32,7 +32,7 @@ export function Hero({
   return (
     <section 
       className={cn(
-        "relative min-h-screen flex items-center justify-center overflow-hidden pt-16", // Added pt-16 to create space for navbar
+        "relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden pt-16", // Changed min-h-screen to min-h-[90vh]
         className
       )}
     >
@@ -47,7 +47,7 @@ export function Hero({
       </div>
       
       {/* Hero Content */}
-      <div className="container relative z-10 px-6 md:px-10 text-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 text-center">
         <div className="space-y-6 animate-slide-up">
           <span className="inline-block text-sm md:text-base font-medium px-4 py-1.5 rounded-full 
                            bg-white/10 text-white backdrop-blur-sm border border-white/20">

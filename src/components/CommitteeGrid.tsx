@@ -27,10 +27,10 @@ export function CommitteeGrid({
   className 
 }: CommitteeGridProps) {
   return (
-    <section className={cn("py-20 px-6 md:px-10", className)}>
-      <div className="container mx-auto">
+    <section className={cn("w-full py-16 md:py-20", className)}>
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Title */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <span className="inline-block text-sm font-medium text-primary mb-3">Meet Our Team</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">{description}</p>
@@ -38,18 +38,18 @@ export function CommitteeGrid({
         </div>
         
         {/* Committee Grid */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {members.map((member, index) => (
             <div 
               key={member.id} 
-              className="group glass-card p-6 transition-all hover:shadow-lg animate-slide-up"
+              className="group glass-card p-5 md:p-6 transition-all hover:shadow-lg animate-slide-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="mb-6 overflow-hidden rounded-xl">
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-80 object-cover transition-transform group-hover:scale-105" 
+                  className="w-full h-72 md:h-80 object-cover transition-transform group-hover:scale-105" 
                 />
               </div>
               

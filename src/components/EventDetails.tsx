@@ -25,22 +25,22 @@ export function EventDetails({
     <section 
       id="event-details"
       className={cn(
-        "py-20 px-6 md:px-10",
+        "w-full py-16 md:py-20",
         className
       )}
     >
-      <div className="container mx-auto">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Section Title */}
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <span className="inline-block text-sm font-medium text-primary mb-3">About the Event</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Event Details</h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Event Info */}
           <div className="space-y-8 animate-slide-right">
-            <div className="glass-card p-8 space-y-6">
+            <div className="glass-card p-6 md:p-8 space-y-6">
               <h3 className="text-2xl font-bold">Quick Information</h3>
               
               <div className="space-y-4">

@@ -6,9 +6,9 @@ export function Footer() {
   const year = new Date().getFullYear();
   
   return (
-    <footer className="bg-primary/5 pt-16 pb-8">
-      <div className="container mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="w-full bg-primary/5 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* About */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold">EVENT</h3>
@@ -62,7 +62,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/register" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/registration" className="text-muted-foreground hover:text-primary transition-colors">
                   Register
                 </Link>
               </li>

@@ -1,4 +1,3 @@
-
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -120,7 +119,7 @@ const speakers = [
   },
 ];
 
-// Sample schedule data - fixed type issues by explicitly setting the type property to match the enum
+// Sample schedule data
 const schedule = [
   {
     date: 'Day 1 - October 15, 2023',
@@ -210,61 +209,63 @@ const Index = () => {
         />
       </Helmet>
       
-      <Navbar />
-      
-      <main className="overflow-hidden">
-        <Hero 
-          title="Innovation & Technology Conference 2023"
-          subtitle="Join us for an extraordinary event experience that brings together innovation, networking, and knowledge-sharing."
-          date="October 15-16, 2023"
-          location="Conference Center, San Francisco"
-        />
+      <div className="flex flex-col min-h-screen overflow-x-hidden">
+        <Navbar />
         
-        <EventDetails 
-          date="October 15-16, 2023"
-          time="8:00 AM - 5:00 PM"
-          location="Conference Center, San Francisco, CA"
-          attendees="500+ Industry Professionals"
-          description="Join us for a two-day immersive experience featuring keynote presentations, panel discussions, workshops, and networking opportunities with industry leaders and innovators from around the world."
-          about="The Innovation & Technology Conference brings together thought leaders, entrepreneurs, and technologists to explore cutting-edge advancements and future trends. This event provides a unique platform for knowledge exchange, collaboration, and discovery across various sectors including AI, sustainability, healthcare, and more."
-        />
+        <main className="flex-grow w-full">
+          <Hero 
+            title="Innovation & Technology Conference 2023"
+            subtitle="Join us for an extraordinary event experience that brings together innovation, networking, and knowledge-sharing."
+            date="October 15-16, 2023"
+            location="Conference Center, San Francisco"
+          />
+          
+          <EventDetails 
+            date="October 15-16, 2023"
+            time="8:00 AM - 5:00 PM"
+            location="Conference Center, San Francisco, CA"
+            attendees="500+ Industry Professionals"
+            description="Join us for a two-day immersive experience featuring keynote presentations, panel discussions, workshops, and networking opportunities with industry leaders and innovators from around the world."
+            about="The Innovation & Technology Conference brings together thought leaders, entrepreneurs, and technologists to explore cutting-edge advancements and future trends. This event provides a unique platform for knowledge exchange, collaboration, and discovery across various sectors including AI, sustainability, healthcare, and more."
+          />
+          
+          <CommitteeGrid 
+            title="Organization Committee"
+            description="Meet the dedicated team behind this event, working tirelessly to create an exceptional experience for all attendees."
+            members={committeeMembers}
+            className="bg-primary/5"
+          />
+          
+          <ExhibitionShowcase 
+            title="Exhibition Highlights"
+            description="Discover innovative ideas and breakthrough technologies from leading companies and startups."
+            exhibitions={exhibitions}
+          />
+          
+          <SpeakersSection 
+            title="Featured Speakers"
+            description="Learn from industry experts and thought leaders who are shaping the future of technology and innovation."
+            speakers={speakers}
+            className="bg-primary/5"
+          />
+          
+          <ScheduleTimeline 
+            title="Program Schedule"
+            description="Plan your event experience with our comprehensive schedule of presentations, workshops, and networking opportunities."
+            schedule={schedule}
+          />
+          
+          <RegisterSection 
+            eventName="Innovation & Technology Conference 2023"
+            date="October 15-16, 2023 | 8:00 AM - 5:00 PM"
+            location="Conference Center, San Francisco, CA"
+            price="499/-"
+            seatsAvailable={120}
+          />
+        </main>
         
-        <CommitteeGrid 
-          title="Organization Committee"
-          description="Meet the dedicated team behind this event, working tirelessly to create an exceptional experience for all attendees."
-          members={committeeMembers}
-          className="bg-primary/5"
-        />
-        
-        <ExhibitionShowcase 
-          title="Exhibition Highlights"
-          description="Discover innovative ideas and breakthrough technologies from leading companies and startups."
-          exhibitions={exhibitions}
-        />
-        
-        <SpeakersSection 
-          title="Featured Speakers"
-          description="Learn from industry experts and thought leaders who are shaping the future of technology and innovation."
-          speakers={speakers}
-          className="bg-primary/5"
-        />
-        
-        <ScheduleTimeline 
-          title="Program Schedule"
-          description="Plan your event experience with our comprehensive schedule of presentations, workshops, and networking opportunities."
-          schedule={schedule}
-        />
-        
-        <RegisterSection 
-          eventName="Innovation & Technology Conference 2023"
-          date="October 15-16, 2023 | 8:00 AM - 5:00 PM"
-          location="Conference Center, San Francisco, CA"
-          price="499/-"
-          seatsAvailable={120}
-        />
-      </main>
-      
-      <Footer />
+        <Footer />
+      </div>
     </HelmetProvider>
   );
 };
