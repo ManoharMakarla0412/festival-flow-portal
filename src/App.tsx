@@ -6,7 +6,6 @@ import Committee from './pages/Committee';
 import Exhibition from './pages/Exhibition';
 import Speakers from './pages/Speakers';
 import Schedule from './pages/Schedule';
-import Registration from './pages/Registration';
 import NotFound from './pages/NotFound';
 import './App.css';
 
@@ -20,7 +19,6 @@ function App() {
           <Route path="/exhibition" element={<Exhibition />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/schedule" element={<Schedule />} />
-          <Route path="/registration" element={<Registration />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
