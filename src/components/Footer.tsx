@@ -10,7 +10,8 @@ import {
   MapPin,
   Calendar,
   Users,
-  BookOpen
+  BookOpen,
+  Clock
 } from 'lucide-react';
 
 export function Footer() {
