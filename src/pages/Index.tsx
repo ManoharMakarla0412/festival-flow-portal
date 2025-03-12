@@ -1,4 +1,3 @@
-
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -256,13 +255,13 @@ const Index = () => {
             schedule={schedule}
           />
           
-{/*           <RegisterSection 
+          <RegisterSection 
             eventName="Innovation & Technology Conference 2023"
             date="October 15-16, 2023 | 8:00 AM - 5:00 PM"
             location="Conference Center, San Francisco, CA"
-            price="499"
+            price="499/-"
             seatsAvailable={120}
-          /> */}
+          />
         </main>
         
         <Footer />

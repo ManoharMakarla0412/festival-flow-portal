@@ -45,13 +45,6 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToRegister = () => {
-    const registerElement = document.getElementById('register');
-    if (registerElement) {
-      registerElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <header 
       className={cn(
@@ -82,12 +75,8 @@ export function Navbar() {
               {link.title}
             </Link>
           ))}
-          <Button 
-            onClick={scrollToRegister} 
-            size="sm" 
-            className="animate-scale-in"
-          >
-            Register
+          <Button asChild size="sm" className="button-hover animate-scale-in">
+            <Link to="/registration">Register</Link>
           </Button>
         </div>
 
@@ -116,15 +105,8 @@ export function Navbar() {
                   {link.title}
                 </Link>
               ))}
-              <Button 
-                onClick={() => {
-                  toggleMenu();
-                  setTimeout(() => scrollToRegister(), 300);
-                }} 
-                size="lg" 
-                className="mt-4 animate-scale-in"
-              >
-                Register
+              <Button asChild size="lg" className="mt-4 button-hover animate-scale-in">
+                <Link to="/registration">Register</Link>
               </Button>
             </div>
           </div>
