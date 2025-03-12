@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { CheckCircle2, User, Mail, Home, MapPin, Briefcase, DollarSign } from 'lucide-react';
+import { CheckCircle2, User, Mail, Home, MapPin, Briefcase, IndianRupee } from 'lucide-react';
 
 // Categories and pricing
 const categories = {
@@ -80,7 +80,7 @@ export default function Registration() {
         registration_type: formData.type,
         registration_fee: fee,
         // Including required fields even if not visible on form
-        phone: "",
+        phone: "7569993454",
         country: "",
         state: "",
         city: "",
@@ -320,9 +320,9 @@ export default function Registration() {
                   <div className="glass-card p-6 space-y-6">
                     <div className="flex justify-between items-center">
                       <h3 className="text-lg font-bold">Registration Fee</h3>
-                      <div className="flex items-center gap-2">
-                        <DollarSign className="h-5 w-5 text-primary" />
-                        <span className="text-2xl font-bold text-primary">${fee}</span>
+                      <div className="flex items-center gap-0">
+                        <IndianRupee className="mt-2 h-4 w-4 text-primary" />
+                        <span className="text-xl font-bold text-primary mt-1">{fee}</span>
                       </div>
                     </div>
                     
