@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -44,6 +45,13 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToRegister = () => {
+    const registerElement = document.getElementById('register');
+    if (registerElement) {
+      registerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header 
       className={cn(
@@ -74,6 +82,13 @@ export function Navbar() {
               {link.title}
             </Link>
           ))}
+          <Button 
+            onClick={scrollToRegister} 
+            size="sm" 
+            className="animate-scale-in"
+          >
+            Register
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -101,6 +116,16 @@ export function Navbar() {
                   {link.title}
                 </Link>
               ))}
+              <Button 
+                onClick={() => {
+                  toggleMenu();
+                  setTimeout(() => scrollToRegister(), 300);
+                }} 
+                size="lg" 
+                className="mt-4 animate-scale-in"
+              >
+                Register
+              </Button>
             </div>
           </div>
         )}

@@ -28,6 +28,13 @@ export function Hero({
     }
   };
 
+  const scrollToRegister = () => {
+    const registerElement = document.getElementById('register');
+    if (registerElement) {
+      registerElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section 
       className={cn(
@@ -65,6 +72,14 @@ export function Hero({
             <span className="text-white/80 font-medium">
               <span className="text-white">Location:</span> {location}
             </span>
+            
+            <Button 
+              onClick={scrollToRegister}
+              size="lg" 
+              className="animate-scale-in"
+            >
+              Register Now
+            </Button>
           </div>
         </div>
       </div>
