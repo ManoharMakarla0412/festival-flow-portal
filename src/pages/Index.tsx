@@ -6,7 +6,7 @@ import CommitteeGrid from '@/components/CommitteeGrid';
 import ExhibitionShowcase from '@/components/ExhibitionShowcase';
 import SpeakersSection from '@/components/SpeakersSection';
 import ScheduleTimeline from '@/components/ScheduleTimeline';
-import RegisterSection from '@/components/RegisterSection';
+// import RegisterSection from '@/components/RegisterSection';
 import Footer from '@/components/Footer';
 
 // Sample committee members data
@@ -255,13 +255,13 @@ const Index = () => {
             schedule={schedule}
           />
           
-          <RegisterSection 
+{/*           <RegisterSection 
             eventName="Innovation & Technology Conference 2023"
             date="October 15-16, 2023 | 8:00 AM - 5:00 PM"
             location="Conference Center, San Francisco, CA"
             price="499/-"
             seatsAvailable={120}
-          />
+          /> */}
         </main>
         
         <Footer />
