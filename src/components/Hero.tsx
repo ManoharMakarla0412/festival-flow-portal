@@ -1,7 +1,6 @@
 
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 interface HeroProps {
@@ -66,10 +65,6 @@ export function Hero({
             <span className="text-white/80 font-medium">
               <span className="text-white">Location:</span> {location}
             </span>
-            
-            <Button asChild size="lg" className="button-hover animate-scale-in">
-              <Link to="/registration">Register Now</Link>
-            </Button>
           </div>
         </div>
       </div>

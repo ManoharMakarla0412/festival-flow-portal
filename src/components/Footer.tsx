@@ -61,11 +61,6 @@ export function Footer() {
                   Program Schedule
                 </Link>
               </li>
-              <li>
-                <Link to="/registration" className="text-muted-foreground hover:text-primary transition-colors">
-                  Register
-                </Link>
-              </li>
             </ul>
           </div>
           

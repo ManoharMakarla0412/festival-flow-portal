@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -75,9 +74,6 @@ export function Navbar() {
               {link.title}
             </Link>
           ))}
-          <Button asChild size="sm" className="button-hover animate-scale-in">
-            <Link to="/registration">Register</Link>
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -105,9 +101,6 @@ export function Navbar() {
                   {link.title}
                 </Link>
               ))}
-              <Button asChild size="lg" className="mt-4 button-hover animate-scale-in">
-                <Link to="/registration">Register</Link>
-              </Button>
             </div>
           </div>
         )}
